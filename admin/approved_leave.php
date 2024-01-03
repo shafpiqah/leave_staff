@@ -49,7 +49,6 @@
 						<thead>
 							<tr>
 								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
 								<th>APPLIED DATE</th>
 								<th>HOD STATUS</th>
 								<th>REG. STATUS</th>
@@ -62,7 +61,7 @@
 								<?php 
 								$status=1;
 								$reg_status=1;
-								$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.location,tblemployees.emp_id,tblleaves.LeaveType,tblleaves.PostingDate,tblleaves.Status, tblleaves.admin_status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.Status= '$status' and tblleaves.admin_status = '$reg_status' order by lid desc";
+								$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.location,tblemployees.emp_id,tblleaves.PostingDate,tblleaves.Status, tblleaves.admin_status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.Status= '$status' and tblleaves.admin_status = '$reg_status' order by lid desc";
 									$query = mysqli_query($conn, $sql) or die(mysqli_error());
 									while ($row = mysqli_fetch_array($query)) {
 								 ?>  
@@ -77,7 +76,7 @@
 										</div>
 									</div>
 								</td>
-								<td><?php echo $row['LeaveType']; ?></td>
+								<!-- <td><?php echo $row['LeaveType']; ?></td> -->
 	                            <td><?php echo $row['PostingDate']; ?></td>
 								<td><?php $stats=$row['Status'];
 	                             if($stats==1){

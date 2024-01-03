@@ -22,11 +22,12 @@
 							<span class="micon dw dw-calendar1"></span><span class="mtext">Department</span>
 						</a>
 					</li>
-					<li>
+					<!--  -->
+					<!-- <li>
 						<a href="leave_type.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-calendar1"></span><span class="mtext">Leave Type</span>
 						</a>
-					</li>
+					</li> -->
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-library"></span><span class="mtext">Staff</span>
@@ -41,7 +42,7 @@
 							<span class="micon dw dw-apartment"></span><span class="mtext"> Leave </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="apply_leave.php">Apply Leave</a></li>
+							<!-- <li><a href="apply_leave.php">Apply Leave</a></li> -->
 							<li><a href="leaves.php">All Leave</a></li>
 							<li><a href="pending_leave.php">Pending Leave</a></li>
 							<li><a href="approved_leave.php">Approved Leave</a></li>

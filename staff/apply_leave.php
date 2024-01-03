@@ -148,24 +148,14 @@
 									<?php endif ?>
 								</div>
 								<div class="row">
-									<div class="col-md-12 col-sm-12">
+									<!-- <div class="col-md-12 col-sm-12">
 										<div class="form-group">
 											<label>Leave Type :</label>
 											<select name="leave_type" class="custom-select form-control" required="true" autocomplete="off">
 											<option value="">Select leave type...</option>
-											<?php $sql = "SELECT  LeaveType from tblleavetype";
-											$query = $dbh -> prepare($sql);
-											$query->execute();
-											$results=$query->fetchAll(PDO::FETCH_OBJ);
-											$cnt=1;
-											if($query->rowCount() > 0)
-											{
-											foreach($results as $result)
-											{   ?>                                            
-											<option value="<?php echo htmlentities($result->LeaveType);?>"><?php echo htmlentities($result->LeaveType);?></option>
-											<?php }} ?>
+											
 											</select>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="row">
