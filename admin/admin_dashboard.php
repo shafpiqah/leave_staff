@@ -235,7 +235,6 @@
 						<thead>
 							<tr>
 								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
 								<th>APPLIED DATE</th>
 								<th>HOD STATUS</th>
 								<th>REG. STATUS</th>
@@ -247,7 +246,7 @@
 
 								<?php 
 								$status=1;
-								$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.location,tblemployees.emp_id,tblleaves.LeaveType,tblleaves.PostingDate,tblleaves.Status, tblleaves.admin_status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.Status= '$status' order by lid desc limit 5";
+								$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.location,tblemployees.emp_id,tblleaves.PostingDate,tblleaves.Status, tblleaves.admin_status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.Status= '$status' order by lid desc limit 5";
 									$query = mysqli_query($conn, $sql) or die(mysqli_error());
 									while ($row = mysqli_fetch_array($query)) {
 									  $cnt=1;
@@ -263,8 +262,8 @@
 										</div>
 									</div>
 								</td>
-								<td><?php echo $row['LeaveType']; ?></td>
-	                            <td><?php echo $row['PostingDate']; ?></td>
+								
+								<td><?php echo $row['PostingDate']; ?></td>
 								<td><?php $stats=$row['Status'];
 	                             if($stats==1){
 	                              ?>
@@ -291,6 +290,7 @@
 											<i class="dw dw-more"></i>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+											<!-- <a class="dropdown-item" href="leave_details.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-eye"></i> View</a> -->
 											<a class="dropdown-item" href="admin_dashboard.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-delete-3"></i> Delete</a>
 										</div>
 									</div>

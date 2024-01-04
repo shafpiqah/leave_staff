@@ -1,7 +1,7 @@
 <?php include('includes/header.php')?>
 <?php include('../includes/session.php')?>
 <body>
-	<div class="pre-loader">
+	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -12,7 +12,7 @@
 				Loading...
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php include('includes/navbar.php')?>
 
@@ -49,7 +49,6 @@
 						<thead>
 							<tr>
 								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
 								<th>APPLIED DATE</th>
 								<th>HOD STATUS</th>
 								<th>REG. STATUS</th>

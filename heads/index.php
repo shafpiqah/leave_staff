@@ -1,7 +1,7 @@
 <?php include('includes/header.php')?>
 <?php include('../includes/session.php')?>
 <body>
-	<div class="pre-loader">
+	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -12,7 +12,7 @@
 				Loading...
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php include('includes/navbar.php')?>
 
@@ -235,7 +235,6 @@
 						<thead>
 							<tr>
 								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
 								<th>APPLIED DATE</th>
 								<th>STATUS</th>
 								<th class="datatable-nosort">ACTION</th>
@@ -244,7 +243,7 @@
 						<tbody>
 							<tr>
 
-								<?php $sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblleaves.LeaveType,tblleaves.PostingDate,tblleaves.Status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblemployees.role = 'Staff' and Department = '$session_depart' order by lid desc limit 5";
+								<?php $sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblleaves.PostingDate,tblleaves.Status from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblemployees.role = 'Staff' and Department = '$session_depart' order by lid desc limit 5";
 									$query = $dbh -> prepare($sql);
 									$query->execute();
 									$results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -265,7 +264,6 @@
 										</div>
 									</div>
 								</td>
-								<td><?php echo htmlentities($result->LeaveType);?></td>
 	                            <td><?php echo htmlentities($result->PostingDate);?></td>
 								<td><?php $stats=$result->Status;
 	                             if($stats==1){

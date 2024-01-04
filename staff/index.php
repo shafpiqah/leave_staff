@@ -1,7 +1,7 @@
 <?php include('includes/header.php')?>
 <?php include('../includes/session.php')?>
 <body>
-	<div class="pre-loader">
+	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -12,7 +12,7 @@
 				Loading...
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php include('includes/navbar.php')?>
 
@@ -135,7 +135,7 @@
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus">LEAVE TYPE</th>
+								<!-- <th class="table-plus">LEAVE TYPE</th> -->
 								<th>DATE FROM</th>
 								<th>DATE TO</th>
 								<th>NO. OF DAYS</th>
@@ -158,8 +158,7 @@
                                     foreach($results as $result)
                                     {               ?>  
 
-								  <td><?php echo htmlentities($result->LeaveType);?></td>
-                                  <td><?php echo htmlentities($result->FromDate);?></td>
+								  <td><?php echo htmlentities($result->FromDate);?></td>
                                   <td><?php echo htmlentities($result->ToDate);?></td>
                                   <td><?php echo htmlentities($result->num_days);?></td>
                                   <td><?php $stats=$result->Status;
