@@ -20,10 +20,10 @@
 		$did=intval($_GET['leaveid']);
 		$description=$_POST['description'];
 		$status=$_POST['status'];   
-		$av_leave=$_POST['av_leave'];
-		$num_days=$_POST['num_days'];
+		// $av_leave=$_POST['av_leave'];
+		// $num_days=$_POST['num_days'];
 
-		$REMLEAVE = $av_leave - $num_days;
+		// $REMLEAVE = $av_leave - $num_days;
 
 		date_default_timezone_set('Asia/Kolkata');
 		$admremarkdate=date('Y-m-d G:i:s ', strtotime("now"));
@@ -40,7 +40,7 @@
 			echo "<script>alert('Leave updated Successfully');</script>";
 		}
 		elseif ($status === '1') {
-				$result = mysqli_query($conn,"update tblleaves, tblemployees set tblleaves.registra_remarks='$description',tblleaves.admin_status='$status',tblleaves.AdminRemarkDate='$admremarkdate', tblemployees.Av_leave='$REMLEAVE' where tblleaves.empid = tblemployees.emp_id AND tblleaves.id='$did'");
+				$result = mysqli_query($conn,"update tblleaves, tblemployees set tblleaves.registra_remarks='$description',tblleaves.admin_status='$status',tblleaves.AdminRemarkDate='$admremarkdate'where tblleaves.empid = tblemployees.emp_id AND tblleaves.id='$did'");
 
 				if ($result) {
 			     	echo "<script>alert('Leave updated Successfully');</script>";
@@ -95,7 +95,7 @@
 	</style>
 
 <body>
-	<div class="pre-loader">
+	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -105,7 +105,7 @@
 			<div class="loading-text">
 				Loading...
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 	<?php include('includes/navbar.php')?>
@@ -151,7 +151,7 @@
 						else {
 						
 						$lid=intval($_GET['leaveid']);
-						$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblemployees.Gender,tblemployees.Phonenumber,tblemployees.EmailId,tblemployees.Av_leave,tblleaves.ToDate,tblleaves.FromDate,tblleaves.Description,tblleaves.PostingDate,tblleaves.Status,tblleaves.AdminRemark,tblleaves.admin_status,tblleaves.registra_remarks,tblleaves.AdminRemarkDate,tblleaves.num_days from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.id=:lid";
+						$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblemployees.Gender,tblemployees.Phonenumber,tblemployees.EmailId,tblleaves.ToDate,tblleaves.FromDate,tblleaves.Description,tblleaves.PostingDate,tblleaves.Status,tblleaves.AdminRemark,tblleaves.admin_status,tblleaves.registra_remarks,tblleaves.AdminRemarkDate,tblleaves.num_days from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.id=:lid";
 						$query = $dbh -> prepare($sql);
 						$query->bindParam(':lid',$lid,PDO::PARAM_STR);
 						$query->execute();
@@ -207,12 +207,12 @@
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly name="num_days" value="<?php echo htmlentities($result->num_days);?>">
 								</div>
 							</div>
-							<div class="col-md-4 col-sm-12">
+							<!-- <div class="col-md-4 col-sm-12">
 								<div class="form-group">
 									<label style="font-size:16px;"><b>Available No. of Days</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly name="av_leave" value="<?php echo htmlentities($result->Av_leave);?>">
 								</div>
-							</div>
+							</div> -->
 							<div class="col-md-4">
 								<div class="form-group">
 									<label style="font-size:16px;"><b>Leave Period</b></label>

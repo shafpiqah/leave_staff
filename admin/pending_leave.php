@@ -76,7 +76,7 @@
 										</div>
 									</div>
 								</td>
-								<td><?php echo $row['LeaveType']; ?></td>
+								
 	                            <td><?php echo $row['PostingDate']; ?></td>
 								<td><?php $stats=$row['Status'];
 	                             if($stats==1){

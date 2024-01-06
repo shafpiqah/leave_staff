@@ -171,12 +171,12 @@
 									$new_row = mysqli_fetch_array($query);
 									?>
 								<div class="row">
-									<div class="col-md-4 col-sm-12">
+									<!-- <div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>Staff Leave Days :</label>
 											<input name="leave_days" type="text" class="form-control" required="true" autocomplete="off"value="<?php echo $new_row['Av_leave']; ?>">
 										</div>
-									</div>
+									</div> -->
 									
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">

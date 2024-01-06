@@ -26,7 +26,7 @@
 	</script>
 	<?php
       }else{
-        mysqli_query($conn,"INSERT INTO tblemployees(FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,Av_leave,role,Phonenumber,Status, location) VALUES('$fname','$lname','$email','$password','$gender','$dob','$department','$address','$leave_days','$user_role','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg')         
+        mysqli_query($conn,"INSERT INTO tblemployees(FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,role,Phonenumber,Status, location) VALUES('$fname','$lname','$email','$password','$gender','$dob','$department','$address','$leave_days','$user_role','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg')         
 		") or die(mysqli_error()); ?>
 		<script>alert('Staff Records Successfully  Added');</script>;
 		<script>
@@ -165,19 +165,19 @@
 								</div>
 
 								<div class="row">
-									<div class="col-md-4 col-sm-12">
+									<!-- <div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>Staff Leave Days :</label>
 											<input name="leave_days" type="number" class="form-control" required="true" autocomplete="off">
 										</div>
-									</div>
+									</div> -->
 									
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>User Role :</label>
 											<select name="user_role" class="custom-select form-control" required="true" autocomplete="off">
 												<option value="">Select Role</option>
-												<option value="Admin">Admin</option>
+												<!-- <option value="Admin">Admin</option> -->
 												<option value="HOD">HOD</option>
 												<option value="Staff">Staff</option>
 											</select>

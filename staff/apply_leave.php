@@ -4,7 +4,7 @@
 	if(isset($_POST['apply']))
 	{
 	$empid=$session_id;
-	$leave_type=$_POST['leave_type'];
+	// $leave_type=$_POST['leave_type'];
 	$fromdate=date('d-m-Y', strtotime($_POST['date_from']));
 	$todate=date('d-m-Y', strtotime($_POST['date_to']));
 	$description=$_POST['description'];  
@@ -30,9 +30,9 @@
 		$diff =  date_diff($DF , $DT );
 		$num_days = (1 + $diff->format("%a"));
 
-		$sql="INSERT INTO tblleaves(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid,num_days,PostingDate) VALUES(:leave_type,:fromdate,:todate,:description,:status,:isread,:empid,:num_days,:datePosting)";
+		$sql="INSERT INTO tblleaves(ToDate,FromDate,Description,Status,IsRead,empid,num_days,PostingDate) VALUES(:fromdate,:todate,:description,:status,:isread,:empid,:num_days,:datePosting)";
 		$query = $dbh->prepare($sql);
-		$query->bindParam(':leave_type',$leave_type,PDO::PARAM_STR);
+		// $query->bindParam(':leave_type',$leave_type,PDO::PARAM_STR);
 		$query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
 		$query->bindParam(':todate',$todate,PDO::PARAM_STR);
 		$query->bindParam(':description',$description,PDO::PARAM_STR);
@@ -140,11 +140,11 @@
 										</div>
 									</div>
 									<div class="col-md-6 col-sm-12">
-										<div class="form-group">
+										<!-- <div class="form-group">
 											<label>Available Leave Days </label>
 											<input name="leave_days" type="text" class="form-control" required="true" autocomplete="off" readonly value="<?php echo $row['Av_leave']; ?>">
 										</div>
-									</div>
+									</div> -->
 									<?php endif ?>
 								</div>
 								<div class="row">

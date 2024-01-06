@@ -135,7 +135,7 @@ if (isset($_GET['delete'])) {
 								<th>EMAIL</th>
 								<th>PHONE NUMBER</th>
 								<th>POSITION</th>
-								<th>AVE. LEAVE</th>
+								<!-- <th>AVE. LEAVE</th> -->
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -161,7 +161,6 @@ if (isset($_GET['delete'])) {
 								<td><?php echo $row['EmailId']; ?></td>
 	                            <td><?php echo $row['Phonenumber']; ?></td>
 								<td><?php echo $row['role']; ?></td>
-								<td><?php echo $row['Av_leave']; ?></td>
 								<td>
 									<div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">

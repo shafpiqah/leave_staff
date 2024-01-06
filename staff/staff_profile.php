@@ -49,7 +49,7 @@ if (isset($_POST["update_image"])) {
 ?>
 
 <body>
-	<div class="pre-loader">
+	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -60,7 +60,7 @@ if (isset($_POST["update_image"])) {
 				Loading...
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php include('includes/navbar.php')?>
 
@@ -284,11 +284,11 @@ if (isset($_POST["update_image"])) {
 																$query = mysqli_query($conn,"select * from tblemployees where emp_id = '$session_id' ")or die(mysqli_error());
 																$row = mysqli_fetch_array($query);
 															?>
-															<div class="form-group">
+															<!-- <div class="form-group">
 																<label>Available Leave Days</label>
 																<input class="form-control form-control-lg" type="text" required="true" autocomplete="off" readonly value="<?php echo $row['Av_leave']; ?>">
 															</div>
-														</div>
+														</div> -->
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
 																<label></label>
