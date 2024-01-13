@@ -88,7 +88,10 @@
 						else {
 						
 						$lid=intval($_GET['edit']);
-						$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblemployees.Gender,tblemployees.Phonenumber,tblemployees.EmailId,tblemployees.Av_leave,tblleaves.ToDate,tblleaves.FromDate,tblleaves.Description,tblleaves.PostingDate,tblleaves.Status,tblleaves.AdminRemark,tblleaves.admin_status,tblleaves.registra_remarks,tblleaves.AdminRemarkDate,tblleaves.num_days from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.id=:lid";
+						
+							// to select data to display
+							$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.emp_id,tblemployees.Gender,tblemployees.Phonenumber,tblemployees.EmailId,tblleaves.ToDate,tblleaves.FromDate,tblleaves.Description,tblleaves.PostingDate,tblleaves.Status,tblleaves.AdminRemark,tblleaves.admin_status,tblleaves.registra_remarks,tblleaves.AdminRemarkDate,tblleaves.num_days,tblleaves.Location,tblleaves.TransportType,tblleaves.DriverName,tblleaves.VehiclePlateNumber from tblleaves join tblemployees on tblleaves.empid=tblemployees.emp_id where tblleaves.id=:lid";
+						
 						$query = $dbh -> prepare($sql);
 						$query->bindParam(':lid',$lid,PDO::PARAM_STR);
 						$query->execute();
@@ -126,11 +129,27 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<label style="font-size:16px;"><b>Leave Type</b></label>
-									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->LeaveType);?>">
-								</div>
-							</div>
+    <div class="form-group">
+        <label style="font-size:16px;"><b>Transport Type</b></label>
+        <input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->TransportType);?>">
+    </div>
+</div>
+
+<?php if ($result->TransportType === 'department'): ?>
+    <!-- based on own/department -->
+    <div class="col-md-4 col-sm-12">
+        <div class="form-group">
+            <label style="font-size:16px;"><b>Driver Name</b></label>
+            <input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->DriverName);?>">
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <div class="form-group">
+            <label style="font-size:16px;"><b>Vehicle Plate Number</b></label>
+            <input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->VehiclePlateNumber);?>">
+        </div>
+    </div>
+<?php endif; ?>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
 									<label style="font-size:16px;"><b>Applied Date</b></label>
@@ -146,8 +165,8 @@
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Available No. of Days</b></label>
-									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->Av_leave);?>">
+									<label style="font-size:16px;"><b>Location</b></label>
+									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->Location);?>">
 								</div>
 							</div>
 							<div class="col-md-4">

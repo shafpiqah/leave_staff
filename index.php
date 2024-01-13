@@ -74,15 +74,15 @@ if(isset($_POST['signin']))
 	</script>
 </head>
 <body class="login-page">
-	<div class="login-header box-shadow">
-		<div class="container-fluid d-flex justify-content-between align-items-center">
-			<div class="brand-logo">
-				<a href="login.html">
+	<!-- <div class="login-header box-shadow"> -->
+		<!-- <div class="container-fluid d-flex justify-content-between align-items-center"> -->
+			<!-- <div class="brand-logo"> -->
+				<!-- <a href="login.html">
 					<img src="vendors/images/deskapp-logo-svg.png" alt="">
 				</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
 			<div class="row align-items-center">
@@ -92,7 +92,8 @@ if(isset($_POST['signin']))
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
-							<h2 class="text-center text-primary">Welcome To LeavePortal</h2>
+							<h2 class="text-center text-primary">Welcome To</h2>
+							<h2 class="text-center text-primary">MDR Outstation System</h2>
 						</div>
 						<form name="signin" method="post">
 						
