@@ -39,14 +39,14 @@
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-apartment"></span><span class="mtext"> Leave </span>
+							<span class="micon dw dw-apartment"></span><span class="mtext"> Outstation </span>
 						</a>
 						<ul class="submenu">
 							<!-- <li><a href="apply_leave.php">Apply Leave</a></li> -->
-							<li><a href="leaves.php">All Leave</a></li>
-							<li><a href="pending_leave.php">Pending Leave</a></li>
-							<li><a href="approved_leave.php">Approved Leave</a></li>
-							<li><a href="rejected_leave.php">Rejected Leave</a></li>
+							<li><a href="leaves.php">All Outstation</a></li>
+							<li><a href="pending_leave.php">Pending Outstation</a></li>
+							<li><a href="approved_leave.php">Approved Outstation</a></li>
+							<li><a href="rejected_leave.php">Rejected Outstation</a></li>
 						</ul>
 					</li>
 

@@ -19,11 +19,11 @@
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-apartment"></span><span class="mtext"> Leave </span>
+							<span class="micon dw dw-apartment"></span><span class="mtext"> Outstation </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="apply_leave.php">Apply Leave</a></li>
-							<li><a href="leave_history.php">Leave History</a></li>
+							<li><a href="apply_leave.php">Apply Outstation</a></li>
+							<li><a href="leave_history.php">Outstation History</a></li>
 						</ul>
 					</li>
 

@@ -42,7 +42,7 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">REJECTED LEAVE</h2>
+						<h2 class="text-blue h4">REJECTED OUTSTATION</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">

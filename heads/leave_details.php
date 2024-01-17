@@ -122,12 +122,12 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>LEAVE DETAILS</h4>
+								<h4>OUTSTATION DETAILS</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="admin_dashboard.php">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Leave</li>
+									<li class="breadcrumb-item active" aria-current="page">Outstation</li>
 								</ol>
 							</nav>
 						</div>
@@ -137,7 +137,7 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Leave Details</h4>
+							<h4 class="text-blue h4">Outstation Details</h4>
 							<p class="mb-20"></p>
 						</div>
 					</div>
@@ -236,7 +236,7 @@
 
 							<div class="col-md-4">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Leave Period</b></label>
+									<label style="font-size:16px;"><b>Outstation Period</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="From <?php echo htmlentities($result->FromDate);?> to <?php echo htmlentities($result->ToDate);?>">
 								</div>
 							</div>
@@ -285,7 +285,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Leave Status From HOD</b></label>
+									<label style="font-size:16px;"><b>Outstation Status From HOD</b></label>
 									<?php $stats=$result->Status;?>
 									<?php
 									if ($stats==1): ?>
@@ -335,7 +335,7 @@
 									<div class="modal-dialog modal-dialog-centered" role="document">
 										<div class="modal-content">
 											<div class="modal-body text-center font-18">
-												<h4 class="mb-20">Leave take action</h4>
+												<h4 class="mb-20">Outstation take action</h4>
 												<select name="status" required class="custom-select form-control">
 													<option value="">Choose your option</option>
 				                                          <option value="1">Approved</option>

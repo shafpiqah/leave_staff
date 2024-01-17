@@ -39,7 +39,7 @@ if (isset($_GET['delete'])) {
 	<div class="main-container">
 		<div class="pd-ltr-20">
 			<div class="title pb-20">
-				<h2 class="h3 mb-0">Leave Breakdown</h2>
+				<h2 class="h3 mb-0">Outstation Breakdown</h2>
 			</div>
 			<div class="row pb-10">
 				<div class="col-xl-3 col-lg-3 col-md-6 mb-20">
@@ -56,7 +56,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($empcount);?></div>
-								<div class="font-14 text-secondary weight-500">All Applied Leave</div>
+								<div class="font-14 text-secondary weight-500">All Applied</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#00eccf"><i class="icon-copy dw dw-user-2"></i></div>
@@ -128,7 +128,7 @@ if (isset($_GET['delete'])) {
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">ALL MY LEAVE</h2>
+						<h2 class="text-blue h4">ALL MY OUTSTATION</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">

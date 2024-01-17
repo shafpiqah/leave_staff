@@ -38,7 +38,7 @@
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
 							Welcome back <div class="weight-600 font-30 text-blue"><?php echo $row['FirstName']. " " .$row['LastName']; ?>,</div>
 						</h4>
-						<p class="font-18 max-width-600">you are in an institution established to serve the wider Christian community in Ghana and Africa.</p>
+						<p class="font-18 max-width-600">you are in Majlis Daerah Raub (MDR) Outstation System.</p>
 					</div>
 				</div>
 			</div>
@@ -129,7 +129,7 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-					<h2 class="text-blue h4">LEAVE HISTORY</h2>
+					<h2 class="text-blue h4">OUTSTATION HISTORY</h2>
 				</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">

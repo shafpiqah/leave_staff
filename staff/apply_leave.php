@@ -5,7 +5,7 @@ if (isset($_POST['apply'])) {
 	$empid = $session_id;
 	$fromdate = date('d-m-Y', strtotime($_POST['date_from']));
 	$todate = date('d-m-Y', strtotime($_POST['date_to']));
-	$description = $_POST['description'];
+	$description = $_POST['description']; //for Outstation Reason
 	$status = 0;
 	$isread = 0;
 	// $leave_days=$_POST['leave_days'];
@@ -114,7 +114,7 @@ if (isset($_POST['apply'])) {
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Apply for Leave</li>
+									<li class="breadcrumb-item active" aria-current="page">Apply for Outstation</li>
 								</ol>
 							</nav>
 						</div>
@@ -193,23 +193,23 @@ if (isset($_POST['apply'])) {
 								<div class="row">
 									<div class="col-md-6 col-sm-12">
 										<div class="form-group">
-											<label>Start Leave Date :</label>
+											<label>Start Outstation Date :</label>
 											<input name="date_from" type="text" class="form-control date-picker"
 												required="true" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-6 col-sm-12">
 										<div class="form-group">
-											<label>End Leave Date :</label>
+											<label>End Outstation Date :</label>
 											<input name="date_to" type="text" class="form-control date-picker"
 												required="true" autocomplete="off">
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<div class="row"> 
 									<div class="col-md-8 col-sm-12">
 										<div class="form-group">
-											<label>Reason :</label>
+											<label>Outstation Reason :</label>
 											<textarea id="textarea1" name="description" class="form-control" required
 												length="150" maxlength="150" required="true"
 												autocomplete="off"></textarea>
@@ -220,7 +220,7 @@ if (isset($_POST['apply'])) {
 											<label style="font-size:16px;"><b></b></label>
 											<div class="modal-footer justify-content-center">
 												<button class="btn btn-primary" name="apply" id="apply"
-													data-toggle="modal">Apply&nbsp;Leave</button>
+													data-toggle="modal">Apply&nbsp;Outstation</button>
 											</div>
 										</div>
 									</div>

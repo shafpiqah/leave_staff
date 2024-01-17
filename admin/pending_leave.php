@@ -28,12 +28,12 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Leave Portal</h4>
+								<h4>Outstation Portal</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Pending Leave</li>
+									<li class="breadcrumb-item active" aria-current="page">Pending Outstation</li>
 								</ol>
 							</nav>
 					</div>
@@ -42,7 +42,7 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">PENDING LEVAE</h2>
+						<h2 class="text-blue h4">PENDING OUTSTATION</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
