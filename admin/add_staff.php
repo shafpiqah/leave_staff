@@ -12,7 +12,6 @@
 	$dob=$_POST['dob']; 
 	$department=$_POST['department']; 
 	$address=$_POST['address']; 
-	$leave_days=$_POST['leave_days']; 
 	$user_role=$_POST['user_role']; 
 	$phonenumber=$_POST['phonenumber']; 
 	$status=1;
@@ -165,13 +164,7 @@
 								</div>
 
 								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Staff Leave Days :</label>
-											<input name="leave_days" type="number" class="form-control" required="true" autocomplete="off">
-										</div>
-									</div>
-									
+				
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>User Role :</label>

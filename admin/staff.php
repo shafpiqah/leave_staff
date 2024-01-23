@@ -135,7 +135,6 @@ if (isset($_GET['delete'])) {
 								<th>EMAIL</th>
 								<th>DEPARTMENT</th>
 								<th>POSITION</th>
-								<th>AVE. LEAVE</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>

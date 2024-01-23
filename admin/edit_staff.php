@@ -10,13 +10,11 @@
 	$email=$_POST['email'];  
 	$gender=$_POST['gender']; 
 	$dob=$_POST['dob']; 
-	$department=$_POST['department']; 
-	$address=$_POST['address']; 
-	$leave_days=$_POST['leave_days']; 
+	$department=$_POST['department'];  
 	$user_role=$_POST['user_role']; 
 	$phonenumber=$_POST['phonenumber']; 
 
-	$result = mysqli_query($conn,"update tblemployees set FirstName='$fname', LastName='$lname', EmailId='$email', Gender='$gender', Dob='$dob', Department='$department', Address='$address', Av_leave='$leave_days', role='$user_role', Phonenumber='$phonenumber' where emp_id='$get_id'         
+	$result = mysqli_query($conn,"update tblemployees set FirstName='$fname', LastName='$lname', EmailId='$email', Gender='$gender', Dob='$dob', Department='$department', Address='$address',role='$user_role', Phonenumber='$phonenumber' where emp_id='$get_id'         
 		"); 		
 	if ($result) {
      	echo "<script>alert('Record Successfully Updated');</script>";
@@ -170,14 +168,7 @@
 									$query = mysqli_query($conn,"select * from tblemployees where emp_id = '$get_id' ")or die(mysqli_error());
 									$new_row = mysqli_fetch_array($query);
 									?>
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Staff Leave Days :</label>
-											<input name="leave_days" type="text" class="form-control" required="true" autocomplete="off"value="<?php echo $new_row['Av_leave']; ?>">
-										</div>
-									</div>
-									
+								<div class="row">					
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>User Role :</label>
