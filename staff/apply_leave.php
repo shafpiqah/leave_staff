@@ -140,91 +140,107 @@ if (isset($_POST['apply'])) {
 									<div class="row">
 										<div class="col-md-6 col-sm-12">
 											<div class="form-group">
-												<label>First Name </label>
+												<label for="firstname">First Name:</label>
 												<input name="firstname" type="text" class="form-control wizard-required"
 													required="true" readonly autocomplete="off"
-													value="<?php echo $row['FirstName']; ?>">
+													value="<?= $row['FirstName']; ?>">
 											</div>
 										</div>
 										<div class="col-md-6 col-sm-12">
 											<div class="form-group">
-												<label>Last Name </label>
+												<label for="lastname">Last Name:</label>
 												<input name="lastname" type="text" class="form-control" readonly
-													required="true" autocomplete="off"
-													value="<?php echo $row['LastName']; ?>">
+													required="true" autocomplete="off" value="<?= $row['LastName']; ?>">
 											</div>
 										</div>
 									</div>
+
 									<div class="row">
 										<div class="col-md-6 col-sm-12">
 											<div class="form-group">
-												<label>Email Address</label>
+												<label for="email">Email Address:</label>
 												<input name="email" type="text" class="form-control" required="true"
-													autocomplete="off" readonly value="<?php echo $row['EmailId']; ?>">
+													autocomplete="off" readonly value="<?= $row['EmailId']; ?>">
 											</div>
 										</div>
 										<div class="col-md-6 col-sm-12">
 											<div class="form-group">
-											<label>Location : </label>
-											<input name="outstation_location" type="text" class="form-control" required="true" autocomplete="off" >
-										<?php endif ?>
+												<label for="outstation_location">Location:</label>
+												<input name="outstation_location" type="text" class="form-control"
+													required="true" autocomplete="off">
+											</div>
+										</div>
 									</div>
+
 									<div class="row">
-									<label for="outstation_transport">Select Transport:</label>
-												<select name="outstation_transport" id="outstation_transport">
+										<div class="col-md-6 col-sm-12">
+											<div class="form-group">
+												<label for="outstation_transport">Select Transport:</label>
+												<select name="outstation_transport" id="outstation_transport"
+													class="form-control">
 													<option value="own">Own Transport</option>
 													<option value="department">Department Transport</option>
 												</select>
-												<br>
-
-												<!-- Additional fields for "department" transport -->
-												<div id="department_fields" style="display:none;">
+											</div>
+										</div>
+									</div>
+									<!-- Additional fields for "department" transport -->
+									<div id="department_fields" style="display:none;">
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
 													<label for="driver_name">Driver Name:</label>
-													<input type="text" name="driver_name" id="driver_name">
-													<br>
-
+													<input type="text" name="driver_name" id="driver_name"
+														class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="form-group">
 													<label for="vehicle_plate_number">Vehicle Plate Number:</label>
-													<input type="text" name="vehicle_plate_number"
-														id="vehicle_plate_number">
-													<br>
+													<input type="text" name="vehicle_plate_number" id="vehicle_plate_number"
+														class="form-control">
 												</div>
 											</div>
 										</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="form-group">
-											<label>Start Outstation Date :</label>
-											<input name="date_from" type="text" class="form-control date-picker"
-												required="true" autocomplete="off">
-										</div>
 									</div>
-									<div class="col-md-6 col-sm-12">
-										<div class="form-group">
-											<label>End Outstation Date :</label>
-											<input name="date_to" type="text" class="form-control date-picker"
-												required="true" autocomplete="off">
+
+									<div class="row">
+										<div class="col-md-6 col-sm-12">
+											<div class="form-group">
+												<label for="date_from">Start Outstation Date:</label>
+												<input name="date_from" type="text" class="form-control date-picker"
+													required="true" autocomplete="off">
+											</div>
 										</div>
-									</div>
-								</div>
-								<div class="row"> 
-									<div class="col-md-8 col-sm-12">
-										<div class="form-group">
-											<label>Outstation Reason :</label>
-											<textarea id="textarea1" name="description" class="form-control" required
-												length="150" maxlength="150" required="true"
-												autocomplete="off"></textarea>
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label style="font-size:16px;"><b></b></label>
-											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="apply" id="apply"
-													data-toggle="modal">Apply&nbsp;Outstation</button>
+										<div class="col-md-6 col-sm-12">
+											<div class="form-group">
+												<label for="date_to">End Outstation Date:</label>
+												<input name="date_to" type="text" class="form-control date-picker"
+													required="true" autocomplete="off">
 											</div>
 										</div>
 									</div>
-								</div>
+
+									<div class="row">
+										<div class="col-md-8 col-sm-12">
+											<div class="form-group">
+												<label for="textarea1">Outstation Reason:</label>
+												<textarea id="textarea1" name="description" class="form-control" required
+													length="150" maxlength="150" required="true"
+													autocomplete="off"></textarea>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<div class="form-group">
+												<label style="font-size:16px;"><b></b></label>
+												<div class="modal-footer justify-content-center">
+													<button class="btn btn-primary" name="apply" id="apply"
+														data-toggle="modal">Apply Outstation</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								<?php endif ?>
 							</section>
 						</form>
 					</div>
