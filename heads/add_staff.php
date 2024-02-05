@@ -11,8 +11,7 @@
 	$gender=$_POST['gender']; 
 	$dob=$_POST['dob']; 
 	$department=$_POST['department']; 
-	$address=$_POST['address']; 
-	$leave_days=$_POST['leave_days']; 
+	$address=$_POST['address'];
 	$user_role=$_POST['user_role']; 
 	$phonenumber=$_POST['phonenumber']; 
 	$status=1;
@@ -26,7 +25,7 @@
 	</script>
 	<?php
       }else{
-        mysqli_query($conn,"INSERT INTO tblemployees(FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,role,Phonenumber,Status, location) VALUES('$fname','$lname','$email','$password','$gender','$dob','$department','$address','$leave_days','$user_role','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg')         
+        mysqli_query($conn,"INSERT INTO tblemployees(FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,role,Phonenumber,Status, location) VALUES('$fname','$lname','$email','$password','$gender','$dob','$department','$address','$user_role','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg')         
 		") or die(mysqli_error()); ?>
 		<script>alert('Staff Records Successfully  Added');</script>;
 		<script>
