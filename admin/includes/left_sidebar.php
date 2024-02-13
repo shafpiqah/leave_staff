@@ -50,7 +50,7 @@
 						</ul>
 					</li>
 
-					<li>
+					<!-- <li>
 						<div class="dropdown-divider"></div>
 					</li>
 					<li>
@@ -60,7 +60,7 @@
 						<a href="https://kpro.netlify.app/" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-edit-2"></span><span class="mtext">Visit Us</span>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>

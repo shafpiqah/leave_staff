@@ -38,10 +38,10 @@
 						</ul>
 					</li>
 
-					<li>
+					<!-- <li>
 						<div class="dropdown-divider"></div>
-					</li>
-					<li>
+					</li> -->
+					<!-- <li>
 						<div class="sidebar-small-cap">Extra</div>
 					</li>
 					<li>
@@ -54,7 +54,7 @@
 							<span class="micon dw dw-paper-plane1"></span>
 							<span class="mtext">Faculty </span>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
