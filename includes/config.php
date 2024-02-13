@@ -2,10 +2,10 @@
 
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','admin');
+define('DB_PASS','');
 define('DB_NAME','leave_staff');
 
-$conn = mysqli_connect('localhost','root','admin','leave_staff') or die(mysqli_error());
+$conn = mysqli_connect('localhost','root','','leave_staff') or die(mysqli_error());
 
 // Establish database connection.
 try
